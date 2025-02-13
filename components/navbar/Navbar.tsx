@@ -1,5 +1,6 @@
 import { HomeIcon } from '@primer/octicons-react'
 import Link from 'next/link'
+import { ActiveLink } from '../active-link/ActiveLink'
 
 const navItems = [
   {
@@ -26,10 +27,8 @@ export const Navbar = () => {
 
       <div className='flex flex-1'></div>
 
-      {navItems.map(({ text, path }) => (
-        <Link key={path} href={path} className='mr-2'>
-          {text}
-        </Link>
+      {navItems.map(navItem => (
+        <ActiveLink key={navItem.path} {...navItem} />
       ))}
     </nav>
   )
