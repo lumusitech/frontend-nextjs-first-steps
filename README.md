@@ -81,7 +81,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
     dist
    ```
 
-5. Vs Code integration
+5. Vs Code integration - insert into vscode `settings.json`
 
    ```json
    "editor.defaultFormatter": "esbenp.prettier-vscode",
