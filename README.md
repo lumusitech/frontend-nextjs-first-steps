@@ -100,4 +100,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## UI
 
-### Icons used - [Octicons](https://www.npmjs.com/package/@primer/octicons-react). To find the names of the available icons, please visit this [link](https://primer.style/foundations/icons)
+Icons used - [Octicons](https://www.npmjs.com/package/@primer/octicons-react). To find the names of the available icons, please visit this [link](https://primer.style/foundations/icons)
+
+## Docker
+
+Docker is used for testing the performance of the application running on a server
+
+The recommended Dockerfile from Next.js is available [here](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile)
+
+Add the standalone option to `next.config.ts` when deploying with Docker
+
+```typescript
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  output: 'standalone',
+};
+
+export default nextConfig;
+```
+
+**Note:** The default Next.js Dockerfile does not work correctly with pnpm. Consequently, npm is the preferred package manager for performance tests within this project's Docker setup.
